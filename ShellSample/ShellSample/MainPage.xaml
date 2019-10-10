@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellSample.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Bottom Tabs" x:Name="ButtonBottomTabs" Clicked="ButtonBottomTabs_Clicked"/>
+            <Button Text="Top Tabs" x:Name="ButtonTopTabs" Clicked="ButtonTopTabs_Clicked"/>
+            <Button Text="Flyout" x:Name="ButtonFlyout" Clicked="ButtonFlyout_Clicked"/>
+            <Button Text="Search Bar" x:Name="ButtonSearchBar" Clicked="ButtonSearchBar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

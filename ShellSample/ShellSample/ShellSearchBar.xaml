@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="ShellSample.ShellSearchBar"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShellSample.Views">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarTitleColor" Value="White" />
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!--  Flyout  -->
+    <FlyoutItem Title="Items" Icon="tab_feed.png">
+        <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+
+    </FlyoutItem>
+    <FlyoutItem Title="About" Icon="tab_about.png">
+        <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+
+
+
+    <!--  Bottom Tabs  -->
+    <!--<TabBar>
+        <Tab Title="Browse" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+        </Tab>
+        <Tab Title="About" Icon="tab_about.png">
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate local:AboutPage}"
+                Icon="tab_about.png" />
+        </Tab>
+        <Tab Title="About" Icon="tab_about.png">
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate local:AboutPage}"
+                Icon="tab_about.png" />
+        </Tab>
+        <Tab Title="About" Icon="tab_about.png">
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate local:AboutPage}"
+                Icon="tab_about.png" />
+        </Tab>
+    </TabBar>-->
+
+    <!--  Top Tabs  -->
+    <!--<TabBar>
+        <Tab Title="Browse" Icon="tab_feed.png">
+            <ShellContent
+                Title="Browse"
+                ContentTemplate="{DataTemplate local:ItemsPage}"
+                Icon="tab_feed.png" />
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate local:AboutPage}"
+                Icon="tab_about.png" />
+        </Tab>
+        <Tab Title="About" Icon="tab_about.png">
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate local:AboutPage}"
+                Icon="tab_about.png" />
+        </Tab>
+    </TabBar>-->
+
+  
+    <!--<Tab Title="Browse" Icon="tab_feed.png">
+        <ShellContent ContentTemplate="{DataTemplate local:ItemsPageWithSearchHandler}" />
+    </Tab>
+    <Tab Title="About" Icon="tab_about.png">
+        <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+    </Tab>-->
+
+
+
+</Shell>
